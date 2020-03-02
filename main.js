@@ -1,18 +1,19 @@
-const add = (x, y) => { return x + y }
 
 
-
-const updateWithAdd = async (event) => {
+const updatelength= async(event)=>{
   document.querySelector('#result').innerHTML = ''
-  if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
-    const regex = /[^a-zA-Z_]/g
-    const s = document.querySelector('#guest').value.replace(regex, '')
-    const i = parseInt(document.querySelector('#firstNumber').value)
-    const j = parseInt(document.querySelector('#secondNumber').value)
-    const ans = `${s}, your sum is ${add(i, j)}.`
+  const j= name.length('#guest')
+  const ans = `${s},length of the word is ${(j)}.`
     document.querySelector('#result').innerHTML = ans
   }
 
+}
+
+// delegate to dynamic elements (e.g. when testing)
+// focusout is like blur, but it bubbles up
+
+
+
 document.addEventListener('click', event => {
   if (event.target && event.target.id === 'length') { updatelength(event) }
-}
+})
